@@ -6,9 +6,6 @@ import TDSummaryProcessor
 import WebDownloader
 import RefGenMaker
 import StarAligner
-import SamTools
-import BigWigFileMaker
-import FeatureCounter
 import MultiQCRunner
 import SailorEditing
 import ColorTextWriter
@@ -45,15 +42,6 @@ sa.aligner()
 
 qc_bam = FastQCRunner.FastQCRunner(cv.home_dir, cv.fastqc_bam, cv.star_aligned, cv.file_type[1])
 qc_bam.fastqc()
-
-ss = SamTools.SamTools(cv.home_dir, cv.star_aligned, cv.Threads, cv.extensions)
-ss.sam_sorting()
-
-bw = BigWigFileMaker.BigWigFileMaker(cv.home_dir, cv.sam_sorted, cv.extensions)
-bw.bigwig()
-
-fc = FeatureCounter.FeatureCounter(cv.home_dir, cv.sam_sorted, gv.diff_features, gv.stranded, cv.feature_dir, cv.feature_file, cv.extensions, gv.seq_method)
-fc.feature()
 
 mqc = MultiQCRunner.MultiQCRunner(cv.home_dir)
 mqc.multiqc()

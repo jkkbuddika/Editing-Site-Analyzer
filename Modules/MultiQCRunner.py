@@ -1,6 +1,6 @@
 import os
+import glob
 import subprocess as sp
-import ListMaker
 import ColorTextWriter
 
 class MultiQCRunner:
@@ -13,8 +13,7 @@ class MultiQCRunner:
         outdir = os.path.join(self.home_dir, 'MultiQC_Summary')
         if not os.path.isdir(outdir): os.mkdir(outdir)
 
-        dl = ListMaker.ListMaker(self.home_dir)
-        dir_list = dl.list_files()
+        dir_list = sorted(glob.glob(self.home_dir + '*/'))
 
         ctw = ColorTextWriter.ColorTextWriter()
 

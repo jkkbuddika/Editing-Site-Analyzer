@@ -6,6 +6,9 @@ class GeneralVariables:
     ## Name of the Biomart rRNA list in add_mat directory.
     rRNA_list = 'Dro_rRNA.txt'
 
+    ## Name of the BED file containing SNP data.
+    snps_file = 'Dro_snps.bed'
+
     ## Link to the Biomart genome file of interest.
     genome = 'ftp://ftp.ensembl.org/pub/release-99/fasta/drosophila_melanogaster/dna/Drosophila_melanogaster.BDGP6.28.dna_sm.toplevel.fa.gz'
 

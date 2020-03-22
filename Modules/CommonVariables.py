@@ -38,15 +38,10 @@ class CommonVariables:
     ref_genome = home_dir + 'star_genome/'
     star_aligned = home_dir + 'star_aligned/'
 
-    ## Sam Tools Sorting
-    sam_sorted = home_dir + 'sam_sorted/'
-
-    ## DeepTools BigWig Files
-    bigwig_files = home_dir + 'bedgraphs/'
+    ## Sailor A-to-I editing
+    sailor_dir = home_dir + 'sailor/'
+    snp_file = sailor_dir + gv.snps_file
+    sailor_path = sailor_dir + 'sailor-1.0.4'
 
     ## FeatureCounts
     fc_output = home_dir + 'feature_counts'
-
-    ## Sailor A-to-I editing
-    snp_file = add_mat + 'Dro_snp.bed'
-    sailor_path = add_mat + 'sailor-1.0.4'
