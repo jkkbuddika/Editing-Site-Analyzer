@@ -54,7 +54,7 @@ class Tagduster:
                         '-H', self.home_dir, self.tagdust_sing,
                         'tagdust -1 O:N -2 R:N',
                         '-o', output_file,
-                        '-ref', self.rrna_list, '-fe 3', i, j
+                        '-ref', self.rrna_list, '-fe 2', i, j
                     ]
 
                     command = ' '.join(command)
