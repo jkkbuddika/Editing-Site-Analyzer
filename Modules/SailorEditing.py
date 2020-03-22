@@ -22,7 +22,7 @@ class SailorEditing():
         for i in bam_files:
             if i.endswith(self.extensions[4]):
 
-                print(ctw.CRED + 'Seraching for A-to-I editing sites: ' + ctw.CBLUE + os.path.basename(i) + ctw.CRED + ' ...' + ctw.CEND + '\n')
+                print('\n' + ctw.CRED + 'Seraching for A-to-I editing sites: ' + ctw.CBLUE + os.path.basename(i) + ctw.CRED + ' ...' + ctw.CEND + '\n')
 
                 ## Write the .yaml file
 
@@ -43,6 +43,10 @@ class SailorEditing():
 
                 command = ' '.join(command)
                 sp.check_call(command, shell=True)
+
+                ## Move results to "sailor" directory and remove .yml files
+
+                sp.call(['mv', i, os.path.dirname(self.sailor_path) + '/'])
                 sp.call('rm -r ' + yml_file, shell=True)
 
         print(ctw.CBEIGE + ctw.CBOLD + 'A-to-I Editing Site Identification Completed!!!' + ctw.CEND)

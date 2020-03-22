@@ -24,8 +24,8 @@ class MultiQCRunner:
 
             param = [
                 'multiqc',
-                self.home_dir + i + '/',
-                '-o', outdir,
+                i,
+                '-o', outdir + '/',
                 '-n', i + '_MultiQC_Report.html'
             ]
 
