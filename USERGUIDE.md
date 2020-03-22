@@ -155,3 +155,4 @@ done > bam_readCounts_aligned.txt
 ```
 > Executing the above bash command will save a file named *bam_readCounts_aligned.txt* in the *star_aligned* directory with bam file names and number of reads that are mapped to the reference genome. Note that the [sam flag](https://broadinstitute.github.io/picard/explain-flags.html) ***4*** eliminates unmapped sequences from the count, thus giving the total number of sequences that are successfully aligned.     
 
+Now that you have carefully read the **USER GUIDE** let's use a publically available dataset to identify A-to-I editing sites, [click here](https://github.com/jkkbuddika/Editing-Site-Analyzer/blob/master/VIGNETTE.md). 
