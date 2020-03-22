@@ -46,3 +46,7 @@ class CommonVariables:
 
     ## FeatureCounts
     fc_output = home_dir + 'feature_counts'
+
+    ## Sailor A-to-I editing
+    snp_file = add_mat + 'Dro_snp.bed'
+    sailor_path = add_mat + 'sailor-1.0.4'

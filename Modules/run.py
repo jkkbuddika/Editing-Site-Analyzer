@@ -10,6 +10,7 @@ import SamTools
 import BigWigFileMaker
 import FeatureCounter
 import MultiQCRunner
+import SailorEditing
 import ColorTextWriter
 
 #### Executing the Program
@@ -56,6 +57,9 @@ fc.feature()
 
 mqc = MultiQCRunner.MultiQCRunner(cv.home_dir)
 mqc.multiqc()
+
+se = SailorEditing.SailorEditing(cv.star_aligned, cv.sailor_path, cv.genome_fa, cv.snp_file, cv.extensions)
+se.editing_prediction()
 
 ctw = ColorTextWriter.ColorTextWriter()
 print('\n' + ctw.CGREEN + ctw.CBOLD + ctw.CBLINK + 'Data analysis is successfully completed!!! ' + ctw.CEND + '\n')
