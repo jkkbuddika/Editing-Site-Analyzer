@@ -2,20 +2,26 @@
 Please go through this step-by-step guide to setup and begin analysis of your data. This is a ***six*** step process:
 
 ### Step 1: Getting started
-Set up a conda environment with all necessary packages installed. To set up the conda environment (i.e., dataanalyzer):
+The first step is to make a conda environment with all necessary packages installed. There are two options to do this:
+
+**Option 1:** If you want to use the conda environment that is being used during the time this workflow has been written, you can do so by using the *environment.yml* file in the environment directory to recreate the conda environment.
+```
+conda env create -f environment.yml -p ~/miniconda3/envs/dataanalyzer
+```
+**Option 2:** If you want to setup a new conda envirnment with newest software packages and dependencies, you can do so by executing the following command.
 ```
 conda create -n dataanalyzer -c conda-forge -c bioconda python=3.7
 conda install -n dataanalyzer -c conda-forge -c bioconda fastqc star qualimap multiqc pandas singularity
 ```
-To update your conda environment:
+Then update your conda environment.
 ```
 conda update -n dataanalyzer -c conda-forge -c bioconda --all
 ```
-To activate the enironment:
+Once created, you can activate the environment by executing:
 ```
 source activate dataanalyzer
 ```
-To deactivate the environment:
+To deactivate the environment either close the terminal window or execute:
 ```
 source deactivate
 ```
