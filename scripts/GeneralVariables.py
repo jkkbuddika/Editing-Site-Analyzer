@@ -15,8 +15,3 @@ class GeneralVariables:
     ## Link to the Biomart annotation file of interest.
     feature = 'ftp://ftp.ensembl.org/pub/release-99/gtf/drosophila_melanogaster/Drosophila_melanogaster.BDGP6.28.99.gtf.gz'
 
-    ## Strandedness of the experiment: '0', '1' or '2'
-    stranded = '0'
-
-    ## Include a list of features to be quantified.
-    diff_features = ['gene', 'three_prime_utr', 'CDS', 'five_prime_utr']
